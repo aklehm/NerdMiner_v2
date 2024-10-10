@@ -52,6 +52,9 @@ DisplayDriver *currentDisplayDriver = &m5stickCDriver;
 DisplayDriver *currentDisplayDriver = &t_hmiDisplayDriver;
 #endif
 
+#ifdef OLED_DISPLAY
+DisplayDriver *currentDisplayDriver = &esp32_oled_driver;
+#endif
 
 // Initialize the display
 void initDisplay()
